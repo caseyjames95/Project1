@@ -2,7 +2,7 @@
 
 ### [GitHub Source](https://github.com/caseyjames95/Project1) | [GitHub Pages](https://www.google.com)
 
-#### Members
+### Members:
 #### Casey Purves (Master/Dev)
 #### Bert Keller (Dev)
 #### Derek Smith (Dev)
