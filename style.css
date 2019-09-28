@@ -1,0 +1,24 @@
+ *{
+    margin:0px;
+    padding:0px;
+ }
+body {
+   background-image: url(https://s3.envato.com/files/256760345/coffpl_nov-7.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: 34% 33% 33%;
+   margin-left: 100px;
+   margin-top: 150px;
+    
+}
+
+.slideshow{
+    max-width: 800px;
+    max-height: 800px;
+    margin-left: 400px;
+    margin-top: 200px;
+}
