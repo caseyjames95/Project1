@@ -1,18 +1,17 @@
-
-#map {
-    height: 100%;
-}
-  /* Optional: Makes the sample page fill the window. */
-  html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
 *{
     margin:0px;
     padding:0px;
 }
 
+#map {
+    height: 100%;
+}
+  /* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
    background-image: url("../../assets/images/coffeeBack.jpg");
    background-repeat: no-repeat;
@@ -24,7 +23,9 @@ body {
    margin-left: auto;
    opacity: 0.9;
    padding:40px;
-    
+}
+#modal {
+   margin-top: 40px;
 }
 
 #second-card-link {
