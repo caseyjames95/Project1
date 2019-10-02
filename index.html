@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Project 1 | notStarbucks</title>
-  
+
   <link rel='stylesheet' href='./assets/css/styles.css'>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -84,65 +84,66 @@
           </script>
 
 
-    <div class="modal" id="locationModal" tabindex="-1" role="dialog">
-          <script>
-            // FirebaseUI config.
-            var uiConfig = {
-              signInSuccessUrl: 'index.html',
-              signInOptions: [
-                // Leave the lines as is for the providers you want to offer your users.
-                firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          <div class="modal" id="locationModal" tabindex="-1" role="dialog">
+            <script>
+              // FirebaseUI config.
+              var uiConfig = {
+                signInSuccessUrl: 'index.html',
+                signInOptions: [
+                  // Leave the lines as is for the providers you want to offer your users.
+                  firebase.auth.GoogleAuthProvider.PROVIDER_ID,
 
-              ]
-            };
+                ]
+              };
 
-            // Initialize the FirebaseUI Widget using Firebase.
-            var ui = new firebaseui.auth.AuthUI(firebase.auth());
-            // The start method will wait until the DOM is loaded.
-            ui.start('#firebaseui-auth-container', uiConfig);
-          </script>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+              // Initialize the FirebaseUI Widget using Firebase.
+              var ui = new firebaseui.auth.AuthUI(firebase.auth());
+              // The start method will wait until the DOM is loaded.
+              ui.start('#firebaseui-auth-container', uiConfig);
+            </script>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
+
   <!-- Location Modal --->
   <div id="location" class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Enter your zip code or "Find My Location"</h5>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group row">
-
-                        <label for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
-                        <div class="col-sm-5">
-                            <input type="text" class="form-control" id="zipInput" placeholder="ex. 92646">
-
-                        </div>
-                        <div class="col-sm-4">
-                            <button type="button" class="btn btn-primary">Find Shops</button>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="findmyloc" class="btn btn-primary">Find My Location</button>
-                </div>
-            </div>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Enter your zip code or "Find My Location"</h5>
         </div>
+        <div class="modal-body">
+          <div class="form-group row">
+
+            <label for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
+            <div class="col-sm-5">
+              <input type="text" class="form-control" id="zipInput" placeholder="ex. 92646">
+
+            </div>
+            <div class="col-sm-4">
+              <button type="button" class="btn btn-primary">Find Shops</button>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="findmyloc" class="btn btn-primary">Find My Location</button>
+        </div>
+      </div>
     </div>
+  </div>
 
 
-    <div style="height:100%; width:100%;">
+  <div style="height:100%; width:100%;">
     <div id="map"></div>
-    </div>
+  </div>
 
   <!-- Map -->
   <div id="map"></div>
@@ -162,14 +163,13 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <!-- Google Maps API -->
-  <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag">
-        </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag">
+  </script>
   <!-- Javascript -->
   <script src="./assets/javascript/auth.js"></script>
   <script src="./assets/javascript/app.js"></script>
   <script src="./assets/javascript/geo.js"></script>
-  
+
 
 </body>
 
