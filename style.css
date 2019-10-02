@@ -8,17 +8,45 @@ body {
    background-size: cover;
 }
 
-.cards {
-    display: grid;
-    grid-template-columns: 34% 33% 33%;
-   margin-left: 100px;
-   margin-top: 150px;
+#card-link {
+   margin-left: auto;
+   opacity: 0.9;
+   padding:40px;
+    
+}
+
+#second-card-link {
+   margin-left: auto;
+   margin-top: auto;
+   opacity: 0.9;
+   padding:40px;
+}
+
+#third-card-link {
+   margin-left: auto;
+   margin-top: auto;
+   opacity: 0.9;
+   padding:40px;
     
 }
 
 .slideshow{
     max-width: 800px;
     max-height: 800px;
-    margin-left: 400px;
-    margin-top: 200px;
+    margin-left: auto;
+    margin-top: auto;
+}
+
+@media screen and (max-width:375) {
+   .slideshow {
+      margin:auto;
+      width: 100%
+   }
+}
+
+@media screen and (max-width:375) {
+   #card{
+      width: 100%;
+   
+   }
 }
