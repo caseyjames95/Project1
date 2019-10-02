@@ -84,6 +84,7 @@
           </script>
 
 
+    <div class="modal" id="locationModal" tabindex="-1" role="dialog">
           <script>
             // FirebaseUI config.
             var uiConfig = {
@@ -118,16 +119,16 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group row">
-                        
+
                         <label for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="zipInput" placeholder="ex. 92646">
-                            
+
                         </div>
                         <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary">Find Shops</button>
+                            <button type="button" class="btn btn-primary">Find Shops</button>
                         </div>
-                    
+
                     </div>
 
                 </div>
@@ -136,6 +137,11 @@
                 </div>
             </div>
         </div>
+    </div>
+
+
+    <div style="height:100%; width:100%;">
+    <div id="map"></div>
     </div>
 
   <!-- Map -->
