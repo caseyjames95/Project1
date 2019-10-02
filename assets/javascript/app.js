@@ -1,7 +1,8 @@
 
-    $(window).on('load',function(){
-        $('#locationModal').modal('show');
-    });
+//  $('#authen').on('hidden.bs.modal', function () {
+//     // Load up a new modal...
+//     $('#locationModal').modal('show')
+//   })
 
     $('#findmyloc').click(function(e) {
         e.preventDefault();
@@ -14,10 +15,11 @@
 
 
 $('#authen').on('hidden.bs.modal', function () {
-    $('#location').modal('show')
-  })
+    $('#location').modal('show');
+    console.log('hello')
+  });
 
 
-    // document.getElementById('findmyloc').addEventListener('click', getLocation)
+// document.getElementById('findmyloc').addEventListener('click', getLocation)
         
 
