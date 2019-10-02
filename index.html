@@ -15,7 +15,7 @@
 <body>
 
 
-    <div class="modal" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal" id="locationModal" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -23,16 +23,16 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group row">
-                        
+
                         <label for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
                         <div class="col-sm-5">
                             <input type="text" class="form-control" id="zipInput" placeholder="ex. 92646">
-                            
+
                         </div>
                         <div class="col-sm-4">
-                                <button type="button" class="btn btn-primary">Find Shops</button>
+                            <button type="button" class="btn btn-primary">Find Shops</button>
                         </div>
-                    
+
                     </div>
 
                 </div>
@@ -43,7 +43,9 @@
         </div>
     </div>
 
-
+    <div style="height:100%; width:100%;">
+    <div id="map"></div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -54,11 +56,14 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag">
-        </script>
-    <script src="./assets/javascript/geo.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag&"type="text/javascript">
+   
+    </script>
     <script src="./assets/javascript/app.js"></script>
+    <script src="./assets/javascript/geo.js"></script>
+    
+
+
 </body>
 
 </html>
