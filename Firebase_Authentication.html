@@ -10,6 +10,7 @@
 <body>
 
         <h1>Not Main Stream</h1>
+        <button id = 'signOut'>Sign Out</button>
         <div id="firebaseui-auth-container"></div>
         <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-auth.js"></script>
@@ -48,7 +49,24 @@
             // Initialize the FirebaseUI Widget using Firebase.
             var ui = new firebaseui.auth.AuthUI(firebase.auth());
             // The start method will wait until the DOM is loaded.
-            ui.start('#firebaseui-auth-container', uiConfig);
+            ui.start('#firebaseui-auth-container', uiConfig)
+
+            // User sign out & button is on top of page.
+            
+            firebase.auth().onAuthStateChanged(user => {
+              if (user) {
+                document.getElementById('firebaseui-auth-container').style.display = 'none'
+                document.getElementById('signOut').style.display = 'block'
+              } else {
+                document.getElementById('firebaseui-auth-container').style.display = 'block'
+                document.getElementById('signOut').style.display = 'none'
+              }
+            })
+
+            document.getElementById('signOut').addEventListener('click', e => {
+              firebase.auth().signOut()
+            })
+
           </script>
 
     
