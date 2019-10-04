@@ -10,13 +10,14 @@
         $('#locationModal').modal('hide'); 
         getLocation();
         // initMap();
+        $('#location').modal('hide')
         
     });
 
 
 $('#authen').on('hidden.bs.modal', function () {
     $('#location').modal('show');
-    console.log('hello')
+    
   });
 
 
