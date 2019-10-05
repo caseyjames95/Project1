@@ -4,23 +4,23 @@
 //     $('#locationModal').modal('show')
 //   })
 
-    $('#findmyloc').click(function(e) {
-        e.preventDefault();
-        // Coding
-        $('#locationModal').modal('hide'); 
-        getLocation();
-        // initMap();
-        $('#location').modal('hide')
-        
-    });
+$('#findmyloc').click(function (e) {
+    e.preventDefault();
+    // Coding
+    $('#locationModal').modal('hide');
+    getLocation();
+    // initMap();
+    $('#location').modal('hide')
+
+});
 
 
 $('#authen').on('hidden.bs.modal', function () {
     $('#location').modal('show');
-    
-  });
+
+});
 
 
 // document.getElementById('findmyloc').addEventListener('click', getLocation)
-        
+
 
