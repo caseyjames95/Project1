@@ -1,4 +1,3 @@
-
 let map;
 let lat;
 let lng;
@@ -81,8 +80,9 @@ for(let i=0;i<resultsarr.length;i++){
 <div class="card-body">
   <h5 class="card-title">${resultsarr[i].name}</h5>
   <p class="card-text">Rating: ${resultsarr[i].rating}<br>
-                       Address: ${resultsarr[i].vicinity}</p>
-  <a href="#" class="btn btn-primary" id="${resultsarr[i].name}btn">Go somewhere</a>
+                       Address: ${resultsarr[i].vicinity}<br>
+                       Price Level: ${resultsarr[i].price_level ? resultsarr[i].price_level : "N/A"}</p>
+  
 </div>
 </div>`
     if(resultsarr[i].name === 'Starbucks'){
@@ -93,6 +93,7 @@ cardSlot.innerHTML += shopCard;
 }
 }
 
+// comment
 
 function showPosition(position) {
     lat = parseFloat(position.coords.latitude);
@@ -101,5 +102,3 @@ function showPosition(position) {
     initMap(lat, lng)
     map.setCenter(new google.maps.LatLng(lat, lng));
 };
-
-
