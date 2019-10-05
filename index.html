@@ -28,7 +28,7 @@
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Features</a>
+          <a id="signOut" class="nav-link" href="#">Sign out</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Pricing</a>
@@ -100,6 +100,20 @@
               var ui = new firebaseui.auth.AuthUI(firebase.auth());
               // The start method will wait until the DOM is loaded.
               ui.start('#firebaseui-auth-container', uiConfig);
+
+              firebase.auth().onAuthStateChanged(user => {
+              if (user) {
+                document.getElementById('firebaseui-auth-container').style.display = 'none'
+                document.getElementById('signOut').style.display = 'block'
+              } else {
+                document.getElementById('firebaseui-auth-container').style.display = 'block'
+                document.getElementById('signOut').style.display = 'none'
+              }
+            })
+
+            document.getElementById('signOut').addEventListener('click', e => {
+              firebase.auth().signOut()
+            })
             </script>
           </div>
           <div class="modal-footer">
