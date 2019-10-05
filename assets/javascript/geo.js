@@ -1,4 +1,3 @@
-
 let map;
 let lat;
 let lng;
@@ -94,7 +93,7 @@ cardSlot.innerHTML += shopCard;
 }
 }
 
-
+// comment
 
 function showPosition(position) {
     lat = parseFloat(position.coords.latitude);
@@ -103,5 +102,3 @@ function showPosition(position) {
     initMap(lat, lng)
     map.setCenter(new google.maps.LatLng(lat, lng));
 };
-
-
