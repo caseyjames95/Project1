@@ -118,16 +118,17 @@
         <div class="modal-header">
           <h5 class="modal-title">Enter your zip code or "Find My Location"</h5>
         </div>
+
         <div class="modal-body">
           <div class="form-group row">
 
-            <label for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
+            <label id="zipCodeValue" for="inputPassword" class="col-sm-3 col-form-label">Zip Code</label>
             <div class="col-sm-5">
-              <input type="text" class="form-control" id="zipInput" placeholder="ex. 92646">
+              <input type="text" class="form-control" id="zipCodeValue" placeholder="ex. 92646">
 
             </div>
             <div class="col-sm-4">
-              <button type="button" class="btn btn-primary">Find Shops</button>
+              <button id="zipBtn" type="button" class="btn btn-primary">Find Shops</button>
             </div>
 
           </div>
@@ -163,10 +164,12 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <!-- Google Maps API -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag&libraries=places">
-  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag&libraries=places">
+    </script>
   <!-- Javascript -->
   <script src="./assets/javascript/auth.js"></script>
+  <script src="./assets/javascript/zipgen.js"></script>
   <script src="./assets/javascript/app.js"></script>
   <script src="./assets/javascript/geo.js"></script>
 
