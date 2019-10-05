@@ -75,12 +75,14 @@ return marker;
 function makeCard (){
 for(let i=0;i<resultsarr.length;i++){
     const cardSlot = document.getElementById('cardSlot');
-    let shopCard = `<div class="card" style="width: 18rem;">
+    let shopCard = `<br>
+<div class="card" style="width: 18rem;">
 <class="card-img-top" alt="...">
 <div class="card-body">
   <h5 class="card-title">${resultsarr[i].name}</h5>
-  <p class="card-text"><img src='${resultsarr[i].icon}'</p>
-  <a href="#" class="btn btn-primary">Go somewhere</a>
+  <p class="card-text">Rating: ${resultsarr[i].rating}<br>
+                       Address: ${resultsarr[i].vicinity}</p>
+  <a href="#" class="btn btn-primary" id="${resultsarr[i].name}btn">Go somewhere</a>
 </div>
 </div>`
     if(resultsarr[i].name === 'Starbucks'){
