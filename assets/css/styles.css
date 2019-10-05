@@ -2,9 +2,13 @@
     margin:0px;
     padding:0px;
 }
+#mapcontainer{
+   height: 400px;
+}
 
 #map {
     height: 100%;
+    margin: 5%;
 }
   /* Optional: Makes the sample page fill the window. */
 html, body {
@@ -19,35 +23,13 @@ body {
   background-position: center;
 }
 
-#card-link {
-   margin-left: auto;
-   opacity: 0.9;
-   padding:40px;
-}
-/* #modal {
-   margin-top: 40px;
-} */
 
-#second-card-link {
-   margin-left: auto;
-   margin-top: auto;
-   opacity: 0.9;
-   padding:40px;
+#cardSlot{
+
 }
 
-#third-card-link {
-   margin-left: auto;
-   margin-top: auto;
-   opacity: 0.9;
-   padding:40px;
-    
-}
-
-.slideshow{
-    max-width: 800px;
-    max-height: 800px;
-    margin-left: auto;
-    margin-top: auto;
+.card{
+   margin: 0 auto;
 }
 
 @media screen and (max-width:375) {
