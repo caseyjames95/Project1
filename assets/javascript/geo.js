@@ -94,6 +94,7 @@ cardSlot.innerHTML += shopCard;
 }
 
 
+
 function showPosition(position) {
     lat = parseFloat(position.coords.latitude);
     lng = parseFloat(position.coords.longitude);
