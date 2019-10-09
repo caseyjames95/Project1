@@ -22,12 +22,15 @@
 </head>
 
 <body>
-    <input type="button" value="Redirect" onclick="DelayRedirect()" />
+    <input type="button" value="Search" onclick="DelayRedirect()" />
     <br />
     <br />
     <!-- <div id="dvCountDown" style = "display:none">
         You will be redirected after  -->
-    <div id="dvCountDown"><img src="./assets/images/LoadingScreen.gif" alt="LoadingScreen"> <span id="lblCount"></span>
+    <div>
+        <img src="./assets/images/LoadingScreen.gif" alt="LoadingScreen">
+    </div>
+    <div id="dvCountDown"> <span id="lblCount"></span>
     </div>
     </div>
     <script type="text/javascript">
@@ -35,7 +38,7 @@
             var seconds = 3;
             var dvCountDown = document.getElementById("dvCountDown");
             var lblCount = document.getElementById("lblCount");
-            dvCountDown.style.display = "block";
+            dvCountDown.style.display = "none";
             lblCount.innerHTML = seconds;
             setInterval(function () {
                 seconds--;
@@ -50,4 +53,3 @@
 </body>
 
 </html>
-
