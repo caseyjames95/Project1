@@ -25,12 +25,13 @@ function zipLocation(){
         if (status == google.maps.GeocoderStatus.OK) {
              lat = results[0].geometry.location.lat();
              lng = results[0].geometry.location.lng();
-        
+            initMap(lat, lng)
+            map.setCenter(new google.maps.LatLng(lat, lng));
         } else {
             alert("Request failed.")
+            $('#location').modal('show');
         }
-        initMap(lat, lng)
-    map.setCenter(new google.maps.LatLng(lat, lng));
+        
     })};
     // return [lat, lng];
     

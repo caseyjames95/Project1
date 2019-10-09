@@ -23,10 +23,6 @@ $('#zipbtn').click(function (e){
 
 $('#newLoc').click(function (e) {
     e.preventDefault();
-    // Coding
-    $('#locationModal').modal('show');
-    
-    // initMap();
     $('#location').modal('show')
 
 });
