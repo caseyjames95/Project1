@@ -26,6 +26,7 @@ body {
     }
     #myGif {
         margin-top: 70%;
+        background-position: center;
         opacity: 1;
 
     }
