@@ -7,4 +7,3 @@ if (user) {
         $('#authen').modal('show')
     })
 }
-
