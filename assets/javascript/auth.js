@@ -1,9 +1,10 @@
 var user = firebase.auth().currentUser;
 
 if (user) {
-  $(window).on('load', function () {
-    $('#authen').modal('show')
-})
+  console.log("user signed in")
 } else {
-  console.log('user signed in')
+    $(window).on('load', function () {
+        $('#authen').modal('show')
+    })
 }
+
