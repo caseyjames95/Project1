@@ -5,8 +5,11 @@ let request;
 let service;
 let markers = [];
 let infowindow = new google.maps.InfoWindow();
-let resultsarr = [];
+let geocoder= new google.maps.Geocoder();
 
+let resultsarr = [];
+let zipInput;
+let address;
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -14,6 +17,25 @@ function getLocation() {
         alert("Geolocation is not supported by this browser.");
     }
 }
+function zipLocation(){
+    zipInput = document.getElementById('zipInput').value;
+    address = zipInput;
+
+    geocoder.geocode({ 'address': 'zipcode '+address }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+             lat = results[0].geometry.location.lat();
+             lng = results[0].geometry.location.lng();
+            initMap(lat, lng)
+            map.setCenter(new google.maps.LatLng(lat, lng));
+        } else {
+            alert("Request failed.")
+            $('#location').modal('show');
+        }
+        
+    })};
+    // return [lat, lng];
+    
+    
 
 
 
@@ -81,21 +103,21 @@ function makeCard() {
   <h5 class="card-title">${resultsarr[i].name}</h5>
   <p class="card-text">Rating: ${resultsarr[i].rating}<br>
                        Address: ${resultsarr[i].vicinity}<br>
-                       Price Level: ${resultsarr[i].price_level ? resultsarr[i].price_level : "N/A"}</p>
+                       Price Level: ${resultsarr[i].price_level ? ((resultsarr[i].price_level === 1) ? "$" : "$$") : "N/A"}</p>
   
 </div>
 </div>`
         if (resultsarr[i].name === 'Starbucks') {
-            console.log('fuckstarbucks')
+            console.log('starbucks')
         } else {
             cardSlot.innerHTML += shopCard;
         }
     }
 }
-
 // comment
 
 function showPosition(position) {
+    
     lat = parseFloat(position.coords.latitude);
     lng = parseFloat(position.coords.longitude);
 

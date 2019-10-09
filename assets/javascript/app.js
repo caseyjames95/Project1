@@ -1,3 +1,4 @@
+
 // Comment
 $('#findmyloc').click(function (e) {
     console.log('Finding Location....')
@@ -7,6 +8,12 @@ $('#findmyloc').click(function (e) {
     $('#location').modal('hide')
 
 });
+$('#zipbtn').click(function (e) {
+    $('#location').modal('hide')
+    zipLocation();
+
+}
+);
 
 
 // Comment
