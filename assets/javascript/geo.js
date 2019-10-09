@@ -6,10 +6,10 @@ let service;
 let markers = [];
 let infowindow = new google.maps.InfoWindow();
 let geocoder= new google.maps.Geocoder();
-
 let resultsarr = [];
 let zipInput;
 let address;
+
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -25,13 +25,13 @@ function zipLocation(){
         if (status == google.maps.GeocoderStatus.OK) {
              lat = results[0].geometry.location.lat();
              lng = results[0].geometry.location.lng();
-            initMap(lat, lng)
-            map.setCenter(new google.maps.LatLng(lat, lng));
+           
         } else {
             alert("Request failed.")
             $('#location').modal('show');
         }
-        
+        initMap(lat, lng)
+        map.setCenter(new google.maps.LatLng(lat, lng));
     })};
     // return [lat, lng];
     
@@ -94,6 +94,7 @@ function createMarker(place) {
 
 
 function makeCard() {
+    document.getElementById('cardSlot').innerHTML = ''
     for (let i = 0; i < resultsarr.length; i++) {
         const cardSlot = document.getElementById('cardSlot');
         let shopCard = `<br>

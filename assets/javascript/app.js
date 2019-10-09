@@ -16,12 +16,7 @@ $('#zipbtn').click(function (e) {
 );
 
 
-// Comment
-$('#zipbtn').click(function (e){
-    $('#location').modal('hide')
-    zipLocation();
-}
-);
+
 
 // Comment
 $('#newLoc').click(function (e) {
