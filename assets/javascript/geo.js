@@ -81,18 +81,17 @@ function makeCard() {
   <h5 class="card-title">${resultsarr[i].name}</h5>
   <p class="card-text">Rating: ${resultsarr[i].rating}<br>
                        Address: ${resultsarr[i].vicinity}<br>
-                       Price Level: ${resultsarr[i].price_level ? resultsarr[i].price_level : "N/A"}</p>
+                       Price Level: ${resultsarr[i].price_level ? ((resultsarr[i].price_level === 1) ? "$" : "$$") : "N/A"}</p>
   
 </div>
 </div>`
         if (resultsarr[i].name === 'Starbucks') {
-            console.log('fuckstarbucks')
+            console.log('starbucks')
         } else {
             cardSlot.innerHTML += shopCard;
         }
     }
 }
-
 // comment
 
 function showPosition(position) {
