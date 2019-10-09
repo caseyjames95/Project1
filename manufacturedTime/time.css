@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(224, 213, 204);
+    z-index: -1;
+}
+
+#myGif {
+    margin-top: 50%;
+    background-position: center;
+    /* background-image: url('https://media1.tenor.com/images/c1ffb54572cdf998a6d7a753c747a7a1/tenor.gif?itemid=14739718'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index:1
+    /* display: block; */
+
+}
+
+@media only screen and (max-width: 376px) {
+    body {
+        background-color: rgb(224, 213, 204);
+        z-index: -1;
+    }
+    #myGif {
+        margin-top: 70%;
+        opacity: 1;
+
+    }
+}
