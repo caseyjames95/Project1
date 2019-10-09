@@ -86,7 +86,7 @@ for(let i=0;i<resultsarr.length;i++){
 </div>
 </div>`
     if(resultsarr[i].name === 'Starbucks'){
-console.log('fuckstarbucks')
+console.log('starbucks')
     }else{
 cardSlot.innerHTML += shopCard;
     }
