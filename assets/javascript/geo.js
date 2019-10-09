@@ -28,53 +28,53 @@ function initMap(lati, longi) {
     request = {
         location: center,
         radius: 8000,
-        keyword: ['coffee','cafe'],
+        keyword: ['coffee', 'cafe'],
 
     }
 
 
-service = new google.maps.places.PlacesService(map);
-    
+    service = new google.maps.places.PlacesService(map);
 
-service.nearbySearch(request, callback);
-console.log(request)
+
+    service.nearbySearch(request, callback);
+    console.log(request)
 };
-   
 
 
-   
 
 
-function callback(results, status){
-    resultsarr = results; 
+
+
+function callback(results, status) {
+    resultsarr = results;
     console.log(resultsarr)
-if(status == google.maps.places.PlacesServiceStatus.OK){
-    for (let i =0; i < results.length; i++){
-        markers.push(createMarker(results[i]));
+    if (status == google.maps.places.PlacesServiceStatus.OK) {
+        for (let i = 0; i < results.length; i++) {
+            markers.push(createMarker(results[i]));
+        }
+        makeCard();
     }
-    makeCard();
-}
 }
 
-function createMarker(place){
+function createMarker(place) {
 
-var marker = new google.maps.Marker({
-    map: map,
-    position: place.geometry.location
-});
-marker.addListener('click', function() {
-    infowindow.open(map, marker);
-    infowindow.setContent(place.name);
+    var marker = new google.maps.Marker({
+        map: map,
+        position: place.geometry.location
+    });
+    marker.addListener('click', function () {
+        infowindow.open(map, marker);
+        infowindow.setContent(place.name);
 
-})
-return marker;
+    })
+    return marker;
 }
 
 
-function makeCard (){
-for(let i=0;i<resultsarr.length;i++){
-    const cardSlot = document.getElementById('cardSlot');
-    let shopCard = `<br>
+function makeCard() {
+    for (let i = 0; i < resultsarr.length; i++) {
+        const cardSlot = document.getElementById('cardSlot');
+        let shopCard = `<br>
 <div class="card" style="width: 18rem;">
 <class="card-img-top" alt="...">
 <div class="card-body">
@@ -91,14 +91,13 @@ console.log('starbucks')
 cardSlot.innerHTML += shopCard;
     }
 }
-}
 
 // comment
 
 function showPosition(position) {
     lat = parseFloat(position.coords.latitude);
     lng = parseFloat(position.coords.longitude);
-   
+
     initMap(lat, lng)
     map.setCenter(new google.maps.LatLng(lat, lng));
 };
