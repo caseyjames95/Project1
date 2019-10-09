@@ -5,14 +5,21 @@
 //   })
 
 $('#findmyloc').click(function (e) {
+    console.log('hey')
     e.preventDefault();
     // Coding
-    $('#locationModal').modal('hide');
+  
     getLocation();
     // initMap();
     $('#location').modal('hide')
 
 });
+$('#zipbtn').click(function (e){
+    $('#location').modal('hide')
+    zipLocation();
+
+}
+);
 
 
 $('#authen').on('hidden.bs.modal', function () {
