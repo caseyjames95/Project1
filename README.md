@@ -1,12 +1,12 @@
 # Project 1 | notStarbucks
 
-### [GitHub Source](https://github.com/caseyjames95/Project1) | [GitHub Pages](https://www.google.com)
+### [GitHub Source](https://github.com/caseyjames95/Project1) | [GitHub Pages](https://caseyjames95.github.io/Project1/)
 
 ### Members:
 #### Casey Purves (Master/Dev)
 #### Bert Keller (Dev)
-#### Derek Smith (Dev)
 #### Francisco Raigoza (Dev)
+#### Derek Smith (Dev)
 
 
 ## Objective

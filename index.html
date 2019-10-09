@@ -91,18 +91,18 @@
               ui.start('#firebaseui-auth-container', uiConfig);
 
               firebase.auth().onAuthStateChanged(user => {
-              if (user) {
-                document.getElementById('firebaseui-auth-container').style.display = 'none'
-                document.getElementById('signOut').style.display = 'block'
-              } else {
-                document.getElementById('firebaseui-auth-container').style.display = 'block'
-                document.getElementById('signOut').style.display = 'none'
-              }
-            })
+                if (user) {
+                  document.getElementById('firebaseui-auth-container').style.display = 'none'
+                  document.getElementById('signOut').style.display = 'block'
+                } else {
+                  document.getElementById('firebaseui-auth-container').style.display = 'block'
+                  document.getElementById('signOut').style.display = 'none'
+                }
+              })
 
-            document.getElementById('signOut').addEventListener('click', e => {
-              firebase.auth().signOut()
-            })
+              document.getElementById('signOut').addEventListener('click', e => {
+                firebase.auth().signOut()
+              })
             </script>
           </div>
           <div class="modal-footer">
@@ -147,9 +147,9 @@
   <div id="mapcontainer" style="height: 50%; width:100%;">
     <div id="map"></div>
   </div>
-  
+
   <div class="container-fluid" id="cardSlot">
-  
+
 
 
 
@@ -169,8 +169,9 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
   <!-- Google Maps API -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag&libraries=places">
-  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUT-Rib1958_z4umQK-4InZbEWGgEo5ag&libraries=places">
+    </script>
   <!-- Javascript -->
   <script src="./assets/javascript/auth.js"></script>
   <script src="./assets/javascript/app.js"></script>
