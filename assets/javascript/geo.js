@@ -5,8 +5,11 @@ let request;
 let service;
 let markers = [];
 let infowindow = new google.maps.InfoWindow();
-let resultsarr = [];
+let geocoder= new google.maps.Geocoder();
 
+let resultsarr = [];
+let zipInput;
+let address;
 function getLocation() {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(showPosition);
@@ -14,6 +17,24 @@ function getLocation() {
         alert("Geolocation is not supported by this browser.");
     }
 }
+function zipLocation(){
+    zipInput = document.getElementById('zipInput').value;
+    address = zipInput;
+
+    geocoder.geocode({ 'address': 'zipcode '+address }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+             lat = results[0].geometry.location.lat();
+             lng = results[0].geometry.location.lng();
+        
+        } else {
+            alert("Request failed.")
+        }
+        initMap(lat, lng)
+    map.setCenter(new google.maps.LatLng(lat, lng));
+    })};
+    // return [lat, lng];
+    
+    
 
 
 
@@ -95,6 +116,7 @@ function makeCard() {
 // comment
 
 function showPosition(position) {
+    
     lat = parseFloat(position.coords.latitude);
     lng = parseFloat(position.coords.longitude);
 
