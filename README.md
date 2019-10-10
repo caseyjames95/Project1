@@ -10,17 +10,19 @@
 
 
 ## Objective
-
+#### Enable user to find a coffee shop that is not part of chain or franchise.
 
 ## Functions
-
+#### Search for coffee shops based on zipcode
+#### Search for coffee shops based on current location
 
 ## Integration
-
-#### API
-
+#### APIs
 ##### Google Maps (JavaScript)
-
+###### Maps API
+###### Places API
+###### Geolocation API
+###### Geocoding API
 ##### Firebase
 - User Authentication
 
@@ -34,5 +36,4 @@
 - Turns zipcode in a latitude and longitude that Google Maps API is able to use.
 
 #### Style Library
-
 ##### Bootstrap
