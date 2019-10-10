@@ -1,0 +1,48 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+#mapcontainer{
+   height: 400px;
+}
+
+#map {
+    height: 100%;
+    margin: 5%;
+}
+  /* Optional: Makes the sample page fill the window. */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+   background-image: url("../../assets/images/coffeeBack.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+  background-position: center;
+}
+
+
+#cardSlot{
+
+}
+
+.card{
+   margin: 0 auto;
+}
+
+@media screen and (max-width:375) {
+   .slideshow {
+      margin:auto;
+      width: 100%
+   }
+}
+
+@media screen and (max-width:375) {
+   #card{
+      width: 100%;
+   
+   }
+}
+
