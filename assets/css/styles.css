@@ -2,6 +2,23 @@
     margin:0px;
     padding:0px;
 }
+
+.transmodal {
+   background-color: transparent;
+   border: 0%;
+}
+
+.modal_backdrop {
+   background-color: red;
+}
+
+#loadScreen {
+   color: rgb(227, 212, 201);
+   background-color: rgb(227, 212, 201);
+   padding: 0%;
+   height: 100vh;
+}
+
 #mapcontainer{
    height: 400px;
 }
