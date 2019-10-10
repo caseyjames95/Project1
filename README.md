@@ -16,8 +16,7 @@
 #### Search for coffee shops based on zipcode
 #### Search for coffee shops based on current location
 
-## Integration
-#### APIs
+## Integration (API)
 ##### Google Maps (JavaScript)
 ###### Maps API
 ###### Places API
