@@ -1,6 +1,6 @@
 # Project 1 | notStarbucks
 
-### [GitHub Source](https://github.com/caseyjames95/Project1) | [GitHub Pages](https://caseyjames95.github.io/Project1/)
+### [GitHub Source](https://github.com/caseyjames95/Project1) | 
 
 ### Members:
 #### Casey Purves (Master/Dev)
@@ -17,7 +17,7 @@ notStarbucks is an application that utilizes Firebase authentication with google
 
 Project is Deployed [here](https://caseyjames95.github.io/Project1/)
 
-
+Clone the repository [here](
 
 ## Integration
 
