@@ -3,10 +3,10 @@
 ### [GitHub Source](https://github.com/caseyjames95/Project1)
 
 ### Members:
-#### Casey Purves (Master/Dev)
-#### Bert Keller (Dev)
-#### Francisco Raigoza (Dev)
-#### Derek Smith (Dev)
+* Casey Purves (Git Master/Dev)
+* Bert Keller (Dev)
+* Francisco Raigoza (Dev)
+* Derek Smith (Dev)
 
 
 ## Objective
